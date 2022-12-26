@@ -6,13 +6,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-
-    test = []
-    for i in selenium_spd.test():
-        test.append(i.text)
-    return test
-
-
+    return selenium_spd.test()
 
 
 @app.get("/hello/{name}")
